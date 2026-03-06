@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import Image from "next/image"
 import Link from "next/link"
+import { ArrowUpRight } from "lucide-react"
 
 type Project = {
   title: string
@@ -12,6 +13,7 @@ type Project = {
   impact: string
   summary: string
   image: string
+  href: string
   featured?: boolean
 }
 
@@ -24,43 +26,55 @@ const allProjects: Project[] = [
     summary:
       "Repositioned the brand and rebuilt the identity system to align perception with product ambition.",
     image: "/ShopMaxxi CaseStudy-01.jpg",
+    href: "/ShopMaxxi",
     featured: true,
   },
+
   {
-    title: "Amaan",
-    category: "Brand Identity",
-    year: "2026",
-    impact: "Strategic identity architecture",
-    summary:
-      "Built a structured visual system rooted in clarity, engineering logic, and authority.",
-    image: "/HopeBridge Guideline ds-01.jpg",
-  },
-  {
-    title: "HopeBridge FC",
+    title: "HopeBridge Football Club",
     category: "Brand Identity",
     year: "2025",
     impact: "Complete identity rebuild",
     summary:
       "Designed a cohesive brand system to support long-term credibility and growth.",
     image: "/HopeBridge Guideline ds-01.jpg",
+    href: "/Hopebridge",
   },
+
   {
-    title: "Confident Portfolio",
+    title: "Rofee'ah Modest Fashion",
     category: "Brand Identity",
     year: "2025",
     impact: "Positioning refinement",
     summary:
       "Elevated perception through clarity-driven identity reconstruction.",
-    image: "/HopeBridge Guideline ds-02.jpg",
+    image:
+      "https://res.cloudinary.com/dfqh2niw3/image/upload/v1772275496/Brand_guidelines_-_1_fh0owy.png",
+    href: "/Rofeeah",
   },
+
   {
-    title: "Legacy Concept",
-    category: "Strategy",
-    year: "2024",
-    impact: "Foundational identity logic",
+    title: "PureTential Cleaning Agency",
+    category: "Brand Identity",
+    year: "2026",
+    impact: "Strategic identity architecture",
     summary:
-      "Early-stage brand structure focused on system thinking.",
-    image: "/HopeBridge Guideline ds-27.jpg",
+      "Built a structured visual system rooted in clarity, engineering logic, and authority.",
+    image:
+      "https://res.cloudinary.com/dfqh2niw3/image/upload/v1772770352/Artboard_1-100_yfrhfd.jpg",
+    href: "/Puretential",
+  },
+
+  {
+    title: "Osmart Tech Concept",
+    category: "Brand Identity",
+    year: "2026",
+    impact: "Strategic identity architecture",
+    summary:
+      "Built a structured visual system rooted in clarity, engineering logic, and authority.",
+    image:
+      "https://res.cloudinary.com/dfqh2niw3/image/upload/v1772788933/1_kh1ijy.jpg",
+    href: "/Osmart",
   },
 ]
 
@@ -138,12 +152,13 @@ export default function ProjectsPage() {
         <section className="py-32 border-b border-neutral-200">
           <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
 
-            <div className="relative aspect-video overflow-hidden rounded-3xl">
+            <div className="relative overflow-hidden rounded-3xl">
               <Image
                 src={featuredProject.image}
                 alt={featuredProject.title}
-                fill
-                className="object-cover"
+                width={1200}
+                height={800}
+                className="w-full h-auto"
               />
             </div>
 
@@ -165,10 +180,11 @@ export default function ProjectsPage() {
               </p>
 
               <Link
-                href="#"
-                className="inline-block mt-10 text-emerald-600 font-medium"
+                href={featuredProject.href}
+                className="inline-flex items-center gap-2 mt-10 px-6 py-3 bg-black text-white rounded-full text-sm hover:opacity-90 transition"
               >
-                View Case Study →
+                View Case Study
+                <ArrowUpRight size={16} />
               </Link>
             </div>
 
@@ -189,12 +205,15 @@ export default function ProjectsPage() {
               viewport={{ once: true }}
               className="group"
             >
-              <div className="relative aspect-video overflow-hidden rounded-2xl">
+
+              {/* Image now keeps natural ratio */}
+              <div className="overflow-hidden rounded-2xl">
                 <Image
                   src={project.image}
                   alt={project.title}
-                  fill
-                  className="object-cover group-hover:scale-105 transition duration-700"
+                  width={1200}
+                  height={800}
+                  className="w-full h-auto group-hover:scale-105 transition duration-700"
                 />
               </div>
 
@@ -210,7 +229,16 @@ export default function ProjectsPage() {
                 <p className="mt-3 text-neutral-600 text-sm leading-relaxed">
                   {project.impact}
                 </p>
+
+                <Link
+                  href={project.href}
+                  className="inline-flex items-center gap-2 mt-5 text-sm font-medium text-emerald-600 hover:text-emerald-700 transition"
+                >
+                  View Case Study
+                  <ArrowUpRight size={14} />
+                </Link>
               </div>
+
             </motion.div>
           ))}
 
@@ -223,6 +251,7 @@ export default function ProjectsPage() {
           <h3 className="text-3xl font-semibold leading-tight">
             Building the next system?
           </h3>
+
           <p className="mt-6 text-neutral-600">
             Let’s create clarity that compounds into long-term authority.
           </p>
