@@ -64,7 +64,7 @@ export default function Navbar() {
               <a href="#Services" onClick={() => setOpen(false)}>Services</a>
               <a href="#Projects" onClick={() => setOpen(false)}>Projects</a>
               <a href="#Process" onClick={() => setOpen(false)}>Process</a>
-              <a href="#Articles" onClick={() => setOpen(false)}>Articles</a>
+              <a href="#Articles" onClick={() => setOpen(false)}>Insights</a>
 
               <a
                 href="/start-project"

@@ -16,7 +16,7 @@ const project = {
     "Repositioning an e-commerce brand for scale and conversion clarity.",
   category: "Brand Identity / Web",
   year: "2026",
-  impact: "+48% Conversion Uplift",
+  impact: "",
   images: [
     "https://res.cloudinary.com/YOUR_ACCOUNT/image/upload/v1/shopmaxxi/01.jpg",
     "https://res.cloudinary.com/YOUR_ACCOUNT/image/upload/v1/shopmaxxi/02.jpg",

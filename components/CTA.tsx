@@ -57,10 +57,10 @@ export default function CTASection() {
           </a>
 
           <a
-            href="/portfolio"
+            href="/projects"
             className="inline-block border border-neutral-300 hover:border-neutral-900 hover:text-neutral-900 transition px-8 py-4 rounded-full text-lg text-neutral-700"
           >
-            Review Case Studies
+            Explore Case Studies
           </a>
         </motion.div>
 
@@ -72,7 +72,7 @@ export default function CTASection() {
           viewport={{ once: true }}
           className="mt-16 text-xs text-neutral-500"
         >
-          © 2026 Aderibigbe Alameen. Brand Identity & Strategic Systems.
+          © 2026 Al-ameen Aderibigbe. Brand Identity & Strategic Systems.
         </motion.p>
 
       </div>

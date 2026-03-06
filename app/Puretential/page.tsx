@@ -5,18 +5,18 @@ import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { X } from "lucide-react"
-
+import CTA from "@/components/CTA"
 /* ===============================
    REPLACE THIS DATA PER PROJECT
 ================================= */
 
 const project = {
-  title: "ShopMaxxi",
+  title: "PureTential Cleaning Agency",
   subtitle:
-    "Repositioning an e-commerce brand for scale and conversion clarity.",
-  category: "Brand Identity / Web",
-  year: "2026",
-  impact: "+48% Conversion Uplift",
+    "",
+  category: "Brand Identity",
+  year: "2025",
+  impact: "",
   images: [
     "https://res.cloudinary.com/dfqh2niw3/image/upload/v1772770352/Artboard_1-100_yfrhfd.jpg",
     "https://res.cloudinary.com/dfqh2niw3/image/upload/v1772770354/Artboard_4-100_jqyhqp.jpg",
@@ -98,38 +98,39 @@ export default function CaseStudyPage() {
       </section>
 
       {/* ===============================
-         STACKED VISUALS
-      ================================ */}
+   STACKED VISUALS
+================================ */}
 
-      <section className="py-24">
-        <div className="max-w-5xl mx-auto px-6 space-y-24">
+<section className="py-24">
+  <div className="max-w-5xl mx-auto px-6 space-y-24">
 
-          {project.images.map((img, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="relative aspect-video w-full overflow-hidden rounded-2xl shadow-sm"
-            >
-              <Image
-                src={img}
-                alt={`${project.title} visual ${index + 1}`}
-                fill
-                className="object-contain"
-              />
-            </motion.div>
-          ))}
+    {project.images.map((img, index) => (
+      <motion.div
+        key={index}
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="w-full"
+      >
+        <Image
+          src={img}
+          alt={`${project.title} visual ${index + 1}`}
+          width={2000}
+          height={1200}
+          className="w-full h-auto rounded-2xl shadow-sm"
+        />
+      </motion.div>
+    ))}
 
-        </div>
-      </section>
+  </div>
+</section>
 
       {/* ===============================
          OTHER PROJECTS
       ================================ */}
 
-      <section className="py-32 border-t border-neutral-200">
+      {/* <section className="py-32 border-t border-neutral-200">
         <div className="max-w-6xl mx-auto px-6">
 
           <h2 className="text-2xl font-semibold">
@@ -169,12 +170,12 @@ export default function CaseStudyPage() {
           </div>
 
         </div>
-      </section>
+      </section> */}
 
       {/* ===============================
          FLOATING CTA
       ================================ */}
-
+<CTA />
       {showCTA && (
         <motion.div
           initial={{ opacity: 0, y: 40 }}

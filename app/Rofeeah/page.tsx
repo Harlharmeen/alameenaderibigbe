@@ -5,22 +5,21 @@ import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { X } from "lucide-react"
-
+import CTA from "@/components/CTA" 
 /* ===============================
    REPLACE THIS DATA PER PROJECT
 ================================= */
 
 const project = {
-  title: "ShopMaxxi",
+  title: "Rofee'ah Modest Fashion",
   subtitle:
-    "Repositioning an e-commerce brand for scale and conversion clarity.",
-  category: "Brand Identity / Web",
-  year: "2026",
-  impact: "+48% Conversion Uplift",
+    "Elevated perception through clarity-driven identity construction.",
+  category: "Brand Identity",
+  year: "2025",
+  impact: "Positioning refinement",
   images: [
     "https://res.cloudinary.com/dfqh2niw3/image/upload/v1772275496/Brand_guidelines_-_1_fh0owy.png",
     "https://res.cloudinary.com/dfqh2niw3/image/upload/v1772275494/Brand_guidelines_-_2_g33g1g.png",
-    
     "https://res.cloudinary.com/dfqh2niw3/image/upload/v1772275503/Brand_guidelines_-_4_kmes60.png",
     "https://res.cloudinary.com/dfqh2niw3/image/upload/v1772275511/Brand_guidelines_-_5_ppcpyj.png",
     "https://res.cloudinary.com/dfqh2niw3/image/upload/v1772275516/Brand_guidelines_-_7_pdag57.png",
@@ -50,8 +49,7 @@ export default function CaseStudyPage() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY
-      const triggerPoint =
-        document.body.scrollHeight * 0.35
+      const triggerPoint = document.body.scrollHeight * 0.35
 
       if (scrollPosition > triggerPoint) {
         setShowCTA(true)
@@ -65,9 +63,7 @@ export default function CaseStudyPage() {
   return (
     <main className="bg-[#f8f8f6] text-neutral-900">
 
-      {/* ===============================
-         HERO INTRO
-      ================================ */}
+      {/* HERO */}
 
       <section className="pt-32 pb-20 border-b border-neutral-200">
         <div className="max-w-4xl mx-auto px-6">
@@ -91,9 +87,8 @@ export default function CaseStudyPage() {
         </div>
       </section>
 
-      {/* ===============================
-         STACKED VISUALS
-      ================================ */}
+
+      {/* STACKED VISUALS */}
 
       <section className="py-24">
         <div className="max-w-5xl mx-auto px-6 space-y-24">
@@ -105,13 +100,13 @@ export default function CaseStudyPage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="relative aspect-video w-full overflow-hidden rounded-2xl shadow-sm"
             >
               <Image
                 src={img}
                 alt={`${project.title} visual ${index + 1}`}
-                fill
-                className="object-contain"
+                width={2000}
+                height={1200}
+                className="w-full h-auto rounded-2xl shadow-sm"
               />
             </motion.div>
           ))}
@@ -119,11 +114,10 @@ export default function CaseStudyPage() {
         </div>
       </section>
 
-      {/* ===============================
-         OTHER PROJECTS
-      ================================ */}
 
-      <section className="py-32 border-t border-neutral-200">
+      {/* OTHER PROJECTS */}
+
+      {/* <section className="py-32 border-t border-neutral-200">
         <div className="max-w-6xl mx-auto px-6">
 
           <h2 className="text-2xl font-semibold">
@@ -132,7 +126,7 @@ export default function CaseStudyPage() {
 
           <div className="mt-16 grid md:grid-cols-3 gap-12">
 
-            <Link href="/projects/amaan" className="group">
+            <Link href="/amaan" className="group">
               <div className="relative aspect-video overflow-hidden rounded-xl">
                 <Image
                   src="/Amaan Project-01.jpg"
@@ -146,7 +140,7 @@ export default function CaseStudyPage() {
               </h3>
             </Link>
 
-            <Link href="/projects/hopebridge" className="group">
+            <Link href="/hopebridge" className="group">
               <div className="relative aspect-video overflow-hidden rounded-xl">
                 <Image
                   src="/HopeBridge Guideline ds-01.jpg"
@@ -163,11 +157,10 @@ export default function CaseStudyPage() {
           </div>
 
         </div>
-      </section>
+      </section> */}
+<CTA />
 
-      {/* ===============================
-         FLOATING CTA
-      ================================ */}
+      {/* FLOATING CTA */}
 
       {showCTA && (
         <motion.div

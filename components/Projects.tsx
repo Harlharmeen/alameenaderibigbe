@@ -10,10 +10,10 @@ const projects = [
   {
     title: "ShopMaxxi",
     href: "/ShopMaxxi",
-    impact: "+48% conversion uplift",
+    impact: "Repositioning for better conversion",
     summary:
-      "Repositioned the brand and rebuilt the identity system to align perception with product ambition.",
-    category: "Brand Identity / Web",
+      "Repositioned the brand and rebuilt the identity system to align perception with their ambition.",
+    category: "Brand Identity / Rebranding",
     images: [
       "/ShopMaxxi CaseStudy-01.jpg",
       "/ShopMaxxi CaseStudy-02.jpg",
@@ -23,7 +23,7 @@ const projects = [
   {
     title: "HopeBridge FC",
     href: "/Hopebridge",
-    impact: "Complete identity rebuild",
+    impact: "Birth of identity",
     summary:
       "Designed a cohesive brand architecture to support long-term credibility and growth.",
     category: "Brand Identity",

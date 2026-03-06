@@ -5,18 +5,18 @@ import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { X } from "lucide-react"
-
+import CTA from "@/components/CTA"
 /* ===============================
    REPLACE THIS DATA PER PROJECT
 ================================= */
 
 const project = {
-  title: "ShopMaxxi",
+  title: "O'smart Tech Concept",
   subtitle:
-    "Repositioning an e-commerce brand for scale and conversion clarity.",
-  category: "Brand Identity / Web",
-  year: "2026",
-  impact: "+48% Conversion Uplift",
+    "",
+  category: "Brand Identity",
+  year: "2025",
+  impact: "Upscale brand perception",
   images: [
     "https://res.cloudinary.com/dfqh2niw3/image/upload/v1772788933/1_kh1ijy.jpg",
     "https://res.cloudinary.com/dfqh2niw3/image/upload/v1772788931/2_urjzf6.jpg",
@@ -117,7 +117,7 @@ export default function CaseStudyPage() {
          OTHER PROJECTS
       ================================ */}
 
-      <section className="py-32 border-t border-neutral-200">
+      {/* <section className="py-32 border-t border-neutral-200">
         <div className="max-w-6xl mx-auto px-6">
 
           <h2 className="text-2xl font-semibold">
@@ -157,8 +157,8 @@ export default function CaseStudyPage() {
           </div>
 
         </div>
-      </section>
-
+      </section> */}
+<CTA />
       {/* ===============================
          FLOATING CTA
       ================================ */}

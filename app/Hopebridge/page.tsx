@@ -11,12 +11,12 @@ import { X } from "lucide-react"
 ================================= */
 
 const project = {
-  title: "ShopMaxxi",
+  title: "HOPEBRIDGE FC",
   subtitle:
-    "Repositioning an e-commerce brand for scale and conversion clarity.",
-  category: "Brand Identity / Web",
-  year: "2026",
-  impact: "+48% Conversion Uplift",
+    "Designed a cohesive brand system to support long-term credibility and growth.",
+  category: "Brand Identity",
+  year: "2025",
+  impact: "Birth of identity",
   images: [
     
     "https://res.cloudinary.com/dfqh2niw3/image/upload/v1772769914/Artboard_1_mbkuxi.png",

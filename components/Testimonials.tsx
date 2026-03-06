@@ -6,26 +6,26 @@ import Image from "next/image"
 const testimonials = [
   {
     quote:
-      "Working with Al-ameen wasn’t just a design upgrade — it was strategic clarity. Our brand now communicates authority and long-term vision.",
-    name: "Daniel Okoro",
-    role: "Founder",
-    company: "ShopMaxxi",
-    image: "/clients/daniel.jpg",
+      "This is the most impressive borehole drilling and geotechnical services branding I have encountered so far, distinguished by its captivating presentation, persuasive content, and exceptionally well-organized structure.",
+    name: "Odemakin Sodiq",
+    role: "GM & Technical Lead",
+    company: "AMAAN",
+    image: "/dp-placeholder.jpg",
   },
   {
     quote:
-      "Every decision was grounded in thinking. This wasn’t decoration — it was structured brand architecture.",
-    name: "Mariam Hassan",
-    role: "Creative Director",
-    company: "HopeBridge FC",
+      "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis.",
+    name: "aaaaaaaaaaaaaaa",
+    role: "Technical Lead",
+    company: "ShopMaxxi",
     image: "/clients/mariam.jpg",
   },
   {
     quote:
-      "From immersion to delivery, the process felt intentional and controlled. We now have a system that scales with confidence.",
-    name: "Tolu Adeyemi",
-    role: "CEO",
-    company: "Nimbi",
+      "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis.",
+    name: "bbbbbbbbb",
+    role: "Founder",
+    company: "Osmart Tech Concept",
     image: "/clients/tolu.jpg",
   },
 ]

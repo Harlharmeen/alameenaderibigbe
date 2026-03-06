@@ -20,9 +20,9 @@ type Project = {
 const allProjects: Project[] = [
   {
     title: "ShopMaxxi",
-    category: "Brand + Web",
+    category: "Brand Identity / Rebranding",
     year: "2026",
-    impact: "+48% conversion uplift",
+    impact: "Repositioning for better conversion",
     summary:
       "Repositioned the brand and rebuilt the identity system to align perception with product ambition.",
     image: "/ShopMaxxi CaseStudy-01.jpg",
@@ -34,7 +34,7 @@ const allProjects: Project[] = [
     title: "HopeBridge Football Club",
     category: "Brand Identity",
     year: "2025",
-    impact: "Complete identity rebuild",
+    impact: "Birth of identity",
     summary:
       "Designed a cohesive brand system to support long-term credibility and growth.",
     image: "/HopeBridge Guideline ds-01.jpg",
@@ -47,7 +47,7 @@ const allProjects: Project[] = [
     year: "2025",
     impact: "Positioning refinement",
     summary:
-      "Elevated perception through clarity-driven identity reconstruction.",
+      "Elevated perception through clarity-driven identity construction.",
     image:
       "https://res.cloudinary.com/dfqh2niw3/image/upload/v1772275496/Brand_guidelines_-_1_fh0owy.png",
     href: "/Rofeeah",
@@ -56,10 +56,10 @@ const allProjects: Project[] = [
   {
     title: "PureTential Cleaning Agency",
     category: "Brand Identity",
-    year: "2026",
-    impact: "Strategic identity architecture",
+    year: "2025",
+    impact: "Identity Inception",
     summary:
-      "Built a structured visual system rooted in clarity, engineering logic, and authority.",
+      "",
     image:
       "https://res.cloudinary.com/dfqh2niw3/image/upload/v1772770352/Artboard_1-100_yfrhfd.jpg",
     href: "/Puretential",
@@ -68,10 +68,10 @@ const allProjects: Project[] = [
   {
     title: "Osmart Tech Concept",
     category: "Brand Identity",
-    year: "2026",
-    impact: "Strategic identity architecture",
+    year: "2025",
+    impact: "Upscale brand perception",
     summary:
-      "Built a structured visual system rooted in clarity, engineering logic, and authority.",
+      "",
     image:
       "https://res.cloudinary.com/dfqh2niw3/image/upload/v1772788933/1_kh1ijy.jpg",
     href: "/Osmart",
