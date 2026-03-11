@@ -8,6 +8,19 @@ import Link from "next/link"
 
 const projects = [
   {
+    title: "AMAAN",
+    href: "/Amaan",
+    impact: "Setting their footprint in their industry ",
+    summary:
+      "Designed a cohesive brand architecture to support long-term credibility and growth.",
+    category: "Brand Identity Design",
+    images: [
+      "https://res.cloudinary.com/dfqh2niw3/image/upload/v1773200761/Artboard_1-100_oya5ql.jpg",
+      "https://res.cloudinary.com/dfqh2niw3/image/upload/v1773200807/Artboard_59-100_ugs6bu.jpg",
+      "https://res.cloudinary.com/dfqh2niw3/image/upload/v1773200807/Artboard_48-100_ohnlon.jpg",
+    ],
+  },
+  {
     title: "ShopMaxxi",
     href: "/ShopMaxxi",
     impact: "Repositioning for better conversion",
@@ -20,19 +33,19 @@ const projects = [
       "/ShopMaxxi CaseStudy-03.jpg",
     ],
   },
-  {
-    title: "HopeBridge FC",
-    href: "/Hopebridge",
-    impact: "Birth of identity",
-    summary:
-      "Designed a cohesive brand architecture to support long-term credibility and growth.",
-    category: "Brand Identity",
-    images: [
-      "/HopeBridge Guideline ds-01.jpg",
-      "/HopeBridge Guideline ds-02.jpg",
-      "/HopeBridge Guideline ds-27.jpg",
-    ],
-  },
+  // {
+  //   title: "HopeBridge FC",
+  //   href: "/Hopebridge",
+  //   impact: "Birth of identity",
+  //   summary:
+  //     "Designed a cohesive brand architecture to support long-term credibility and growth.",
+  //   category: "Brand Identity",
+  //   images: [
+  //     "/HopeBridge Guideline ds-01.jpg",
+  //     "/HopeBridge Guideline ds-02.jpg",
+  //     "/HopeBridge Guideline ds-27.jpg",
+  //   ],
+  // },
 ]
 
 export default function Works() {

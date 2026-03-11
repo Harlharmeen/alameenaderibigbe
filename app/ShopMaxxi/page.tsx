@@ -126,51 +126,8 @@ export default function CaseStudyPage() {
         </div>
       </section>
 
-      {/* ===============================
-         OTHER PROJECTS
-      ================================ */}
+      
       <CTA />
-      {/* <section className="py-32 border-t border-neutral-200">
-        <div className="max-w-6xl mx-auto px-6">
-
-          <h2 className="text-2xl font-semibold">
-            Explore Other Work
-          </h2>
-
-          <div className="mt-16 grid md:grid-cols-3 gap-12">
-
-            <Link href="/projects/amaan" className="group">
-              <div className="relative aspect-video overflow-hidden rounded-xl">
-                <Image
-                  src="/Amaan Project-01.jpg"
-                  alt="Amaan"
-                  fill
-                  className="object-cover group-hover:scale-105 transition duration-700"
-                />
-              </div>
-              <h3 className="mt-4 text-lg font-medium">
-                Amaan
-              </h3>
-            </Link>
-
-            <Link href="/projects/hopebridge" className="group">
-              <div className="relative aspect-video overflow-hidden rounded-xl">
-                <Image
-                  src="/HopeBridge Guideline ds-01.jpg"
-                  alt="HopeBridge"
-                  fill
-                  className="object-cover group-hover:scale-105 transition duration-700"
-                />
-              </div>
-              <h3 className="mt-4 text-lg font-medium">
-                HopeBridge FC
-              </h3>
-            </Link>
-
-          </div>
-
-        </div>
-      </section> */}
 
       {/* ===============================
          FLOATING CTA
