@@ -2,11 +2,11 @@
 
 import Navbar from "@/components/Navbar"
 import { motion } from "framer-motion"
-import { CheckCircle2, Target, Shield } from "lucide-react"
+import { CheckCircle2, User, TrendingUp } from "lucide-react"
 import { useUniversalEmailJS } from "@/utils/emailjsUniversal"
 
-export default function StartProject() {
-  const { formRef, handleSubmit } = useUniversalEmailJS("Project Branding")
+export default function StartIndividualBranding() {
+  const { formRef, handleSubmit } = useUniversalEmailJS("Personal Branding")
 
   return (
     <section className="bg-neutral-950 text-white py-32">
@@ -17,17 +17,19 @@ export default function StartProject() {
         {/* HERO */}
 
         <motion.h1 className="text-3xl md:text-5xl font-semibold leading-tight">
-          Start a Brand Identity Project Built on Strategy.
+          Build a Personal Brand That Communicates Credibility.
         </motion.h1>
 
         <p className="mt-6 text-lg text-neutral-400 max-w-2xl">
-          Effective brands do more than look good. They communicate clarity, credibility,
-          and positioning the moment people encounter them.
+          In the digital age, your personal presence speaks before you do.
+          The way you present yourself visually influences trust, authority,
+          and opportunity.
         </p>
 
         <p className="mt-4 text-neutral-500 max-w-2xl">
-          This process focuses on developing a thoughtful visual identity system that
-          aligns with your business goals and audience perception.
+          This engagement focuses on shaping a cohesive personal brand identity
+          that reflects who you are, what you stand for, and how you want to be
+          perceived.
         </p>
 
         <div className="border-t border-neutral-800 my-16" />
@@ -41,22 +43,22 @@ export default function StartProject() {
 
             <li className="flex gap-3">
               <CheckCircle2 size={18} className="text-green-500 mt-[2px]" />
-              Every submission is personally reviewed before engagement.
+              Each submission is personally reviewed before engagement.
             </li>
 
             <li className="flex gap-3">
               <CheckCircle2 size={18} className="text-green-500 mt-[2px]" />
-              Qualified projects proceed to a short discovery conversation.
+              Qualified applicants proceed to a short discovery conversation.
             </li>
 
             <li className="flex gap-3">
               <CheckCircle2 size={18} className="text-green-500 mt-[2px]" />
-              A proposal outlining scope, direction, and investment is then prepared.
+              A proposal outlining the identity direction and deliverables is shared.
             </li>
 
             <li className="flex gap-3">
               <CheckCircle2 size={18} className="text-green-500 mt-[2px]" />
-              Approved engagements move into the structured brand identity process.
+              Approved engagements move into the structured personal branding process.
             </li>
 
           </ul>
@@ -70,30 +72,30 @@ export default function StartProject() {
 
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <Target className="text-green-500" size={20} />
+              <User className="text-green-500" size={20} />
               <h3 className="text-xl font-semibold">This is for you if:</h3>
             </div>
 
             <ul className="space-y-3 text-neutral-400">
-              <li>You are launching a new business or product.</li>
-              <li>You want a professional brand identity system.</li>
-              <li>You care about audience perception and positioning.</li>
-              <li>You value thoughtful design over quick graphics.</li>
+              <li>You want to build a strong professional presence.</li>
+              <li>You want your personal brand to look intentional.</li>
+              <li>You are a founder, creator, or professional building visibility.</li>
+              <li>You want consistency across platforms and materials.</li>
             </ul>
           </div>
 
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <Shield className="text-neutral-600" size={20} />
+              <TrendingUp className="text-neutral-600" size={20} />
               <h3 className="text-xl font-semibold text-neutral-400">
                 This may not be for you if:
               </h3>
             </div>
 
             <ul className="space-y-3 text-neutral-500">
-              <li>You only need a quick logo.</li>
-              <li>You are looking for extremely fast turnaround.</li>
-              <li>You are not interested in strategic brand development.</li>
+              <li>You only want a quick social media graphic.</li>
+              <li>You are not interested in strategic brand positioning.</li>
+              <li>You prefer extremely fast turnaround design.</li>
             </ul>
           </div>
 
@@ -112,13 +114,13 @@ export default function StartProject() {
           <div className="p-8 rounded-3xl bg-neutral-900 border border-neutral-800">
 
             <p className="text-neutral-300 leading-relaxed">
-              Brand Identity engagements begin at{" "}
-              <span className="text-white font-semibold">$525 USD</span>.
+              Personal Branding engagements begin at{" "}
+              <span className="text-white font-semibold">$150 USD</span>.
             </p>
 
             <p className="mt-4 text-neutral-400 text-sm">
-              Final investment depends on project scope and deliverables.
-              A detailed proposal is shared after confirming alignment.
+              Final investment depends on scope, deliverables, and identity depth.
+              A detailed proposal will be shared after confirming alignment.
             </p>
 
           </div>
@@ -134,11 +136,11 @@ export default function StartProject() {
           <input
             type="hidden"
             name="form_type"
-            value="Project Branding"
+            value="Personal Branding"
           />
 
           <h2 className="text-2xl font-semibold">
-            Project Application
+            Personal Branding Application
           </h2>
 
           <input
@@ -146,6 +148,7 @@ export default function StartProject() {
             name="user_name"
             placeholder="Full Name"
             required
+            autoComplete="name"
             className="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-6 py-4 focus:outline-none focus:border-green-500 transition"
           />
 
@@ -154,20 +157,21 @@ export default function StartProject() {
             name="user_email"
             placeholder="Email Address"
             required
+            autoComplete="email"
             className="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-6 py-4 focus:outline-none focus:border-green-500 transition"
           />
 
           <input
             type="text"
             name="budget_or_goal"
-            placeholder="Estimated Branding Budget or Business Goal"
+            placeholder="Primary Platform or Personal Branding Goal"
             required
             className="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-6 py-4 focus:outline-none focus:border-green-500 transition"
           />
 
           <textarea
             name="message"
-            placeholder="Briefly describe your business, product, or brand you want to build."
+            placeholder="Briefly describe yourself and what you want your personal brand to communicate."
             rows={5}
             required
             className="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-6 py-4 focus:outline-none focus:border-green-500 transition"
@@ -183,7 +187,7 @@ export default function StartProject() {
         </form>
 
         <p className="mt-16 text-sm text-neutral-600 text-center">
-          Strong brands are designed deliberately.
+          A respected personal brand is built intentionally.
         </p>
 
       </div>

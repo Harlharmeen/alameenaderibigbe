@@ -11,12 +11,12 @@ import CTA from "@/components/CTA"
 ================================= */
 
 const project = {
-  title: "ShopMaxxi",
+  title: "AMAAN",
   subtitle:
-    "Repositioning an e-commerce brand for scale and conversion clarity.",
+    "Designed a cohesive brand architecture to support long-term credibility and growth.",
   category: "Brand Identity / Web",
   year: "2026",
-  impact: "",
+  impact: "Setting their footprint in their industry",
   images: [
     
     "https://res.cloudinary.com/dfqh2niw3/image/upload/v1773200761/Artboard_1-100_oya5ql.jpg",

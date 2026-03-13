@@ -1,10 +1,14 @@
 "use client"
 import Link from "next/link"
-import { motion } from "framer-motion"
-import { ArrowRight } from "lucide-react"
+import { motion, AnimatePresence } from "framer-motion"
+import { ArrowRight, X } from "lucide-react"
 import Image from "next/image"
+import { useState } from "react"
 
 export default function Hero() {
+
+  const [aboutOpen, setAboutOpen] = useState(false)
+
   return (
     <section className="bg-[#f6f6f4] relative min-h-screen flex flex-col justify-center pt-40">
 
@@ -49,15 +53,24 @@ export default function Hero() {
           </p>
 
           {/* CTA */}
-<div  className="mt-12 flex gap-4 w-full max-w-md">
-  <button className="flex-1 px-6 py-3.5 bg-neutral-900 text-white rounded-full hover:opacity-90 transition flex items-center justify-center gap-2 text-sm whitespace-nowrap">
-    <a href="/projects" className="hover:text-neutral-900 transition">View Work</a> <ArrowRight size={16} />
-  </button>
+          <div className="mt-12 flex gap-4 w-full max-w-md">
 
-  <button className="flex-1 px-6 py-3.5 border border-neutral-300 rounded-full hover:border-neutral-900 transition text-sm whitespace-nowrap">
-    <a href="/start-project" className="hover:text-neutral-900 transition">Start a Project</a>
-  </button>
-</div>
+            <Link
+              href="/projects"
+              className="flex-1 px-6 py-3.5 bg-neutral-900 text-white rounded-full hover:opacity-90 transition flex items-center justify-center gap-2 text-sm"
+            >
+              View Work
+              <ArrowRight size={16} />
+            </Link>
+
+            <Link
+              href="/start-project"
+              className="flex-1 px-6 py-3.5 border border-neutral-300 rounded-full hover:border-neutral-900 transition text-sm flex items-center justify-center"
+            >
+              Start a Project
+            </Link>
+
+          </div>
 
           {/* Tools */}
           <div className="mt-16">
@@ -89,6 +102,15 @@ export default function Hero() {
           }}
           className="relative"
         >
+
+          {/* Floating About Cloud */}
+          <button
+            onClick={() => setAboutOpen(true)}
+            className="absolute -top-6 -left-6 bg-white border border-neutral-200 shadow-lg px-5 py-3 rounded-full text-sm font-medium hover:shadow-xl transition z-20"
+          >
+            About Me
+          </button>
+
           <motion.div
             animate={{ y: [0, -10, 0] }}
             transition={{
@@ -98,6 +120,7 @@ export default function Hero() {
             }}
             className="relative"
           >
+
             <div className="absolute inset-0 bg-gradient-to-tr from-red-500/10 via-transparent to-transparent blur-3xl rounded-3xl scale-110" />
 
             <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-[0_40px_80px_-20px_rgba(0,0,0,0.15)] border border-neutral-200 bg-white">
@@ -109,11 +132,77 @@ export default function Hero() {
                 priority
               />
             </div>
+
           </motion.div>
         </motion.div>
 
       </div>
 
+
+      {/* ABOUT MODAL */}
+
+      <AnimatePresence>
+      {aboutOpen && (
+        <motion.div
+          className="fixed inset-0 z-50 flex items-center justify-center px-4 sm:px-6"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+        >
+
+          {/* BACKDROP */}
+          <div
+            onClick={() => setAboutOpen(false)}
+            className="absolute inset-0 bg-black/50 backdrop-blur-md"
+          />
+
+          {/* MODAL */}
+          <motion.div
+            initial={{ opacity: 0, y: 40, scale: 0.97 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 40, scale: 0.97 }}
+            transition={{ duration: 0.3 }}
+            className="relative z-50 w-full max-w-xl bg-white rounded-2xl shadow-xl overflow-hidden"
+          >
+
+            {/* HEADER */}
+            <div className="flex items-center justify-between px-8 pt-8 pb-4 border-b border-neutral-200">
+              <h3 className="text-2xl font-semibold text-neutral-900">
+                About Me
+              </h3>
+
+              {/* CLOSE BUTTON */}
+              <button
+                onClick={() => setAboutOpen(false)}
+                className="flex items-center justify-center w-10 h-10 rounded-full bg-red-500 text-white hover:bg-red-600 transition"
+              >
+                <X size={20} />
+              </button>
+            </div>
+
+            {/* BODY */}
+            <div className="px-8 py-8 max-h-[80vh] overflow-y-auto">
+              <div className="space-y-5 text-neutral-700 text-base leading-relaxed max-w-xl mx-auto">
+
+                <p>
+                  I'm <span className="font-semibold text-neutral-900">Al-ameen Aderibigbe</span>, a brand identity designer focused on building strategic visual systems for ambitious brands.
+                </p>
+
+                <p>
+                  My work centers on clarity, positioning, and perception — helping organizations communicate credibility and authority through intentional design.
+                </p>
+
+                <p>
+                  I approach branding as a long-term business asset rather than surface decoration, ensuring every visual decision contributes to how a brand is understood, trusted, and remembered.
+                </p>
+
+              </div>
+            </div>
+
+          </motion.div>
+        </motion.div>
+      )}
+    </AnimatePresence>
 
       {/* CREDIBILITY STRIP */}
       <div className="my-12 border-t border-neutral-200 pt-12">
@@ -136,16 +225,22 @@ export default function Hero() {
               duration: 35,
             }}
           >
+
             {[...Array(2)].map((_, i) => (
+
               <div key={i} className="flex items-center gap-24">
+
                 <img src="/logo stripe-01.svg" className="h-8 opacity-50 grayscale hover:opacity-100 hover:grayscale-0 transition duration-300" />
                 <img src="/logo stripe-02.svg" className="h-8 opacity-50 grayscale hover:opacity-100 hover:grayscale-0 transition duration-300" />
                 <img src="/logo stripe-03.svg" className="h-8 opacity-50 grayscale hover:opacity-100 hover:grayscale-0 transition duration-300" />
                 <img src="/logo stripe-04.svg" className="h-8 opacity-50 grayscale hover:opacity-100 hover:grayscale-0 transition duration-300" />
                 <img src="/logo stripe-05.svg" className="h-8 opacity-50 grayscale hover:opacity-100 hover:grayscale-0 transition duration-300" />
                 <img src="/logo stripe-06.svg" className="h-8 opacity-50 grayscale hover:opacity-100 hover:grayscale-0 transition duration-300" />
+
               </div>
+
             ))}
+
           </motion.div>
 
         </div>
