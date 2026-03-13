@@ -9,7 +9,7 @@
 	.st3{fill:#FFFFFF;}
 	.st4{display:inline;fill:#FFFFFF;}
 	.st5{fill:#101E2D;}
-	.st6{fill:#F4F7FB;}
+	.st6{display:none;fill:#F4F7FB;}
 </style>
 <g class="st0">
 	<path class="st1" d="M30.37,16c0,0.36-0.01,0.73-0.04,1.08c-0.27,3.67-1.93,6.96-4.45,9.35c-1.24,1.17-2.68,2.12-4.27,2.8
