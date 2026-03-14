@@ -6,7 +6,9 @@ import { CheckCircle2, Target, Shield } from "lucide-react"
 import { useUniversalEmailJS } from "@/utils/emailjsUniversal"
 
 export default function StartProject() {
-  const { formRef, handleSubmit } = useUniversalEmailJS("Project Branding")
+
+  const { formRef, handleSubmit, loading, success } =
+    useUniversalEmailJS("Project Branding")
 
   return (
     <section className="bg-neutral-950 text-white py-32">
@@ -21,13 +23,13 @@ export default function StartProject() {
         </motion.h1>
 
         <p className="mt-6 text-lg text-neutral-400 max-w-2xl">
-          Effective brands do more than look good. They communicate clarity, credibility,
-          and positioning the moment people encounter them.
+          Effective brands do more than look good. They communicate clarity,
+          credibility, and positioning the moment people encounter them.
         </p>
 
         <p className="mt-4 text-neutral-500 max-w-2xl">
-          This process focuses on developing a thoughtful visual identity system that
-          aligns with your business goals and audience perception.
+          This process focuses on developing a thoughtful visual identity
+          system that aligns with your business goals and audience perception.
         </p>
 
         <div className="border-t border-neutral-800 my-16" />
@@ -51,12 +53,12 @@ export default function StartProject() {
 
             <li className="flex gap-3">
               <CheckCircle2 size={18} className="text-green-500 mt-[2px]" />
-              A proposal outlining scope, direction, and investment is then prepared.
+              A proposal outlining scope, direction, and investment is prepared.
             </li>
 
             <li className="flex gap-3">
               <CheckCircle2 size={18} className="text-green-500 mt-[2px]" />
-              Approved engagements move into the structured brand identity process.
+              Approved engagements move into the structured branding process.
             </li>
 
           </ul>
@@ -92,7 +94,7 @@ export default function StartProject() {
 
             <ul className="space-y-3 text-neutral-500">
               <li>You only need a quick logo.</li>
-              <li>You are looking for extremely fast turnaround.</li>
+              <li>You want extremely fast turnaround.</li>
               <li>You are not interested in strategic brand development.</li>
             </ul>
           </div>
@@ -127,15 +129,22 @@ export default function StartProject() {
 
         <div className="border-t border-neutral-800 my-16" />
 
+        {/* SUCCESS MESSAGE */}
+
+        {success && (
+          <div className="mb-10 p-6 rounded-2xl bg-green-900/30 border border-green-700 text-green-200">
+            <p className="font-semibold">✔ Application received</p>
+            <p className="text-sm mt-1">
+              I will review your request and respond within 24–48 hours.
+            </p>
+          </div>
+        )}
+
         {/* FORM */}
 
         <form ref={formRef} onSubmit={handleSubmit} className="space-y-8">
 
-          <input
-            type="hidden"
-            name="form_type"
-            value="Project Branding"
-          />
+          <input type="hidden" name="form_type" value="Project Branding" />
 
           <h2 className="text-2xl font-semibold">
             Project Application
@@ -167,7 +176,7 @@ export default function StartProject() {
 
           <textarea
             name="message"
-            placeholder="Briefly describe your business, product, or brand you want to build."
+            placeholder="Briefly describe your business or brand."
             rows={5}
             required
             className="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-6 py-4 focus:outline-none focus:border-green-500 transition"
@@ -175,9 +184,17 @@ export default function StartProject() {
 
           <button
             type="submit"
-            className="mt-8 bg-green-600 hover:bg-green-700 transition px-8 py-4 rounded-xl font-semibold text-white"
+            disabled={loading}
+            className="mt-8 bg-green-600 hover:bg-green-700 disabled:opacity-60 disabled:cursor-not-allowed transition px-8 py-4 rounded-xl font-semibold text-white flex items-center justify-center gap-3"
           >
-            Submit Application
+            {loading ? (
+              <>
+                <span className="animate-spin h-5 w-5 border-2 border-white border-t-transparent rounded-full"></span>
+                Sending...
+              </>
+            ) : (
+              "Submit Application"
+            )}
           </button>
 
         </form>

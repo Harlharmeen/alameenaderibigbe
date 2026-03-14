@@ -6,7 +6,9 @@ import { CheckCircle2, User, TrendingUp } from "lucide-react"
 import { useUniversalEmailJS } from "@/utils/emailjsUniversal"
 
 export default function StartIndividualBranding() {
-  const { formRef, handleSubmit } = useUniversalEmailJS("Personal Branding")
+
+  const { formRef, handleSubmit, loading, success } =
+    useUniversalEmailJS("Personal Branding")
 
   return (
     <section className="bg-neutral-950 text-white py-32">
@@ -106,7 +108,6 @@ export default function StartIndividualBranding() {
         {/* INVESTMENT */}
 
         <div>
-
           <h2 className="text-2xl font-semibold mb-6">
             Investment Overview
           </h2>
@@ -124,10 +125,20 @@ export default function StartIndividualBranding() {
             </p>
 
           </div>
-
         </div>
 
         <div className="border-t border-neutral-800 my-16" />
+
+        {/* SUCCESS MESSAGE */}
+
+        {success && (
+          <div className="mb-10 p-6 rounded-2xl bg-green-900/30 border border-green-700 text-green-200">
+            <p className="font-semibold">✔ Application received</p>
+            <p className="text-sm mt-1">
+              I will review your request and respond within 24–48 hours.
+            </p>
+          </div>
+        )}
 
         {/* FORM */}
 
@@ -148,7 +159,6 @@ export default function StartIndividualBranding() {
             name="user_name"
             placeholder="Full Name"
             required
-            autoComplete="name"
             className="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-6 py-4 focus:outline-none focus:border-green-500 transition"
           />
 
@@ -157,7 +167,6 @@ export default function StartIndividualBranding() {
             name="user_email"
             placeholder="Email Address"
             required
-            autoComplete="email"
             className="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-6 py-4 focus:outline-none focus:border-green-500 transition"
           />
 
@@ -179,9 +188,17 @@ export default function StartIndividualBranding() {
 
           <button
             type="submit"
-            className="mt-8 bg-green-600 hover:bg-green-700 transition px-8 py-4 rounded-xl font-semibold text-white"
+            disabled={loading}
+            className="mt-8 bg-green-600 hover:bg-green-700 disabled:opacity-60 disabled:cursor-not-allowed transition px-8 py-4 rounded-xl font-semibold text-white flex items-center justify-center gap-3"
           >
-            Submit Application
+            {loading ? (
+              <>
+                <span className="animate-spin h-5 w-5 border-2 border-white border-t-transparent rounded-full rounded-full"></span>
+                Sending...
+              </>
+            ) : (
+              "Submit Application"
+            )}
           </button>
 
         </form>
