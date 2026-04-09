@@ -19,6 +19,27 @@ type Project = {
 
 const allProjects: Project[] = [
   {
+    title: "IVote",
+    category: "Brand Identity / Rebranding",
+    year: "2026",
+    impact: "Foundational Branding for a SaaS Product",
+    summary:
+      "Designed a brand architecture to build product and position it for success.",
+    image: "https://res.cloudinary.com/dfqh2niw3/image/upload/v1775650668/Artboard_50-100_ob00ve.jpg",
+    href: "/IVote",
+    featured: true,
+  },
+  {
+    title: "AMAAN",
+    category: "Brand Identity / Rebranding",
+    year: "2026",
+    impact: "Setting their footprint in their industry",
+    summary:
+      "Designed a cohesive brand architecture to support long-term credibility and growth.",
+    image: "https://res.cloudinary.com/dfqh2niw3/image/upload/v1773200761/Artboard_1-100_oya5ql.jpg",
+    href: "/AMAAN",
+  },
+  {
     title: "ShopMaxxi",
     category: "Brand Identity / Rebranding",
     year: "2026",
@@ -27,9 +48,7 @@ const allProjects: Project[] = [
       "Repositioned the brand and rebuilt the identity system to align perception with product ambition.",
     image: "/ShopMaxxi CaseStudy-01.jpg",
     href: "/ShopMaxxi",
-    featured: true,
   },
-
   {
     title: "HopeBridge Football Club",
     category: "Brand Identity",

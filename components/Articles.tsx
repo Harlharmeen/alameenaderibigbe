@@ -1,5 +1,5 @@
 "use client"
-
+import Link from "next/link"
 import { motion } from "framer-motion"
 import { Calendar, User } from "lucide-react"
 import Image from "next/image"
@@ -45,12 +45,10 @@ export default function BrandingTransformations() {
     >
       <div className="max-w-7xl mx-auto px-6">
 
-        {/* Label */}
         <span className="text-xs uppercase tracking-widest text-neutral-500">
           Strategic Insights
         </span>
 
-        {/* Heading */}
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -61,60 +59,59 @@ export default function BrandingTransformations() {
           Thinking behind the transformations.
         </motion.h2>
 
-        {/* Supporting Line */}
         <p className="mt-6 text-neutral-400 text-lg max-w-2xl leading-relaxed">
           Deep dives into positioning, brand architecture, and the structural decisions that create long-term authority.
         </p>
 
-        {/* Grid */}
         <div className="mt-20 grid md:grid-cols-3 gap-12">
-          {transformations.map((item, i) => (
+          {transformations.map((item: any, i: number) => (
             <motion.article
               key={i}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: i * 0.06 }}
               viewport={{ once: true }}
-              className="group rounded-3xl bg-neutral-900/60 backdrop-blur border border-neutral-800 hover:border-emerald-500/40 transition-all duration-300 overflow-hidden flex flex-col"
+              className="group rounded-3xl bg-neutral-900/60 backdrop-blur border border-neutral-800 hover:border-emerald-500/40 hover:shadow-[0_20px_50px_-10px_rgba(0,0,0,0.4)] transition-all duration-300 overflow-hidden flex flex-col"
             >
-              {/* Image */}
-              <div className="relative h-52 w-full overflow-hidden">
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-              </div>
+              <Link href={item.link} className="flex flex-col h-full">
 
-              {/* Content */}
-              <div className="p-7 flex flex-col flex-1">
-
-                {/* Tags */}
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {item.tags.map((tag, idx) => (
-                    <span
-                      key={idx}
-                      className="text-xs text-emerald-400 border border-emerald-400/20 px-2 py-1 rounded-full"
-                    >
-                      {tag}
-                    </span>
-                  ))}
+                {/* IMAGE */}
+                <div className="relative h-52 w-full overflow-hidden">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
                 </div>
 
-                {/* Title */}
-                <h3 className="text-xl font-semibold mb-4 leading-snug">
-                  {item.title}
-                </h3>
+                {/* CONTENT */}
+                <div className="p-7 flex flex-col flex-1">
 
-                {/* Excerpt */}
-                <p className="text-neutral-400 text-sm leading-relaxed mb-8 flex-1">
-                  {item.excerpt}
-                </p>
+                  {/* TAGS */}
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {item.tags.map((tag: string, idx: number) => (
+                      <span
+                        key={idx}
+                        className="text-xs text-emerald-400 border border-emerald-400/20 px-2 py-1 rounded-full"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
 
-                {/* Meta */}
-                <div className="flex items-center justify-between text-xs text-neutral-500 border-t border-neutral-800 pt-4">
-                  <div className="flex items-center gap-4">
+                  {/* TITLE */}
+                  <h3 className="text-xl font-semibold mb-3 leading-snug group-hover:text-white transition">
+                    {item.title}
+                  </h3>
+
+                  {/* EXCERPT */}
+                  <p className="text-neutral-400 text-sm leading-relaxed mb-6 flex-1">
+                    {item.excerpt}
+                  </p>
+
+                  {/* META (own space now) */}
+                  <div className="flex items-center justify-between text-xs text-neutral-500 mb-4">
                     <span className="flex items-center gap-1">
                       <Calendar size={14} /> {item.date}
                     </span>
@@ -123,23 +120,26 @@ export default function BrandingTransformations() {
                     </span>
                   </div>
 
-                  <a
-                    href={item.link}
-                    className="text-emerald-400 font-medium hover:opacity-80 transition"
-                  >
-                    Read →
-                  </a>
+                  {/* DIVIDER */}
+                  <div className="border-t border-neutral-800 my-4" />
+
+                  {/* CTA (no longer buried) */}
+                  <div className="flex justify-center pt-4">
+                    <span className="px-4 py-2 rounded-lg bg-emerald-500/10 border border-neutral-700 text-white text-sm font-medium group-hover:bg-emerald-500 group-hover:text-black transition-all duration-300">
+                      Read Insight →
+                    </span>
+                  </div>
+
                 </div>
 
-              </div>
+              </Link>
             </motion.article>
           ))}
         </div>
 
-        {/* Elevated CTA */}
         <div className="mt-20 text-center">
           <a
-            href="/transformations"
+            href="/Insights"
             className="inline-block border border-neutral-700 hover:border-white transition px-8 py-4 rounded-full text-lg"
           >
             Explore All Insights

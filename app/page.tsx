@@ -11,6 +11,7 @@ import CTA from "@/components/CTA"
 export default function Home() {
   return (
     <main className="bg-[#f6f6f4] text-neutral-900">
+
       <Navbar />
       <Hero />
       <Problem />
@@ -21,6 +22,7 @@ export default function Home() {
       <Testimonials />
       
       <Articles />
+  
       <CTA />
     </main>
   )

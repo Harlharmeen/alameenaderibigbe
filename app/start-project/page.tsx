@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar"
 import { motion } from "framer-motion"
 import { CheckCircle2, Target, Shield } from "lucide-react"
 import { useUniversalEmailJS } from "@/utils/emailjsUniversal"
-
+import CTA from "@/components/CTA"
 export default function StartProject() {
 
   const { formRef, handleSubmit, loading, success } =
@@ -204,6 +204,7 @@ export default function StartProject() {
         </p>
 
       </div>
+            <CTA />
     </section>
   )
 }

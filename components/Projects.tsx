@@ -19,8 +19,21 @@ type TabKey = "brand" | "event" | "individual"
 
 const projectData: Record<TabKey, { projects: Project[]; viewAll: string }> = {
   brand: {
-    viewAll: "/projects/brand",
+    viewAll: "/projects",
     projects: [
+      {
+        title: "IVote",
+        href: "/IVote",
+        impact: "Foundational Branding for a SaaS Product",
+        summary:
+          "Designed a brand architecture to build product and position it for success.",
+        category: "Brand Identity Design",
+        images: [
+          "https://res.cloudinary.com/dfqh2niw3/image/upload/v1775650668/Artboard_50-100_ob00ve.jpg",
+          "https://res.cloudinary.com/dfqh2niw3/image/upload/v1775650634/Artboard_30-100_ev8bvg.jpg",
+          "https://res.cloudinary.com/dfqh2niw3/image/upload/v1775650661/Artboard_44-100_brsssa.jpg",
+        ],
+      },
       {
         title: "AMAAN",
         href: "/Amaan",

@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar"
 import { motion } from "framer-motion"
 import { CheckCircle2, User, TrendingUp } from "lucide-react"
 import { useUniversalEmailJS } from "@/utils/emailjsUniversal"
-
+import CTA from "@/components/CTA"
 export default function StartIndividualBranding() {
 
   const { formRef, handleSubmit, loading, success } =
@@ -208,6 +208,7 @@ export default function StartIndividualBranding() {
         </p>
 
       </div>
+            <CTA />
     </section>
   )
 }

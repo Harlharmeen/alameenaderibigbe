@@ -1,5 +1,5 @@
 "use client"
-
+import Navbar from "@/components/Navbar"
 import { useState, useEffect } from "react"
 import Image from "next/image"
 import Link from "next/link"
@@ -76,6 +76,7 @@ export default function CaseStudyPage() {
       ================================ */}
 
       <section className="pt-32 pb-20 border-b border-neutral-200">
+              <Navbar />
         <div className="max-w-4xl mx-auto px-6">
 
           <p className="text-sm uppercase tracking-wider text-neutral-500">
@@ -102,7 +103,7 @@ export default function CaseStudyPage() {
 ================================ */}
 
 <section className="py-24">
-  <div className="max-w-5xl mx-auto px-6 space-y-24">
+  <div className="max-w-5xl mx-auto px-6 flex flex-col gap-6">
 
     {project.images.map((img, index) => (
       <motion.div
