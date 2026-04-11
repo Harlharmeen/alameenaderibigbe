@@ -14,19 +14,20 @@ const testimonials = [
   },
   {
     quote:
-      "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis.",
-    name: "aaaaaaaaaaaaaaa",
-    role: "Technical Lead",
-    company: "ShopMaxxi",
-    image: "/clients/mariam.jpg",
+      "Working with you was easily one of the best decisions I’ve made for this project. I approached you with scattered ideas that I couldn’t quite make sense of; you managed to convert that raw energy into a matured, future-proof brand. What stands out most is your unique mental model—the ability to actually engineer the thoughts of a business owner into reality. You brought what I imagined (but couldn't express) to life in a way that is both concise and incredibly smart. You are truly a brand designer who understands the 'why' behind the 'what.'",
+      
+    name: "Abdul-Azeez Abdul-Azeem S.",
+    role: "Software Engineer",
+    company: "IVote",
+    image: "dp-placeholder.jpg",
   },
   {
     quote:
       "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis.",
-    name: "bbbbbbbbb",
+    name: "Olabode Olajide",
     role: "Founder",
     company: "Osmart Tech Concept",
-    image: "/clients/tolu.jpg",
+    image: "dp-placeholder.jpg",
   },
 ]
 
