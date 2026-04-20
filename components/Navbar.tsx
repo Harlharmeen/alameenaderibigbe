@@ -62,6 +62,7 @@ export default function Navbar() {
           >
             Insights
           </Link>
+          
 
 
           {/* START PROJECT DROPDOWN */}

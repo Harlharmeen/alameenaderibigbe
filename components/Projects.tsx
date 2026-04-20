@@ -67,13 +67,13 @@ const projectData: Record<TabKey, { projects: Project[]; viewAll: string }> = {
     viewAll: "/projects/event",
     projects: [
       {
-        title: "Event Project Placeholder",
-        href: "#",
+        title: "DynaRaise Impact Summit 2026",
+        href: "/DynaRaiseImpactSummit",
         impact: "Event identity experience",
         summary:
-          "Placeholder case study representing a full event branding system including stage visuals and attendee materials.",
+          "This project was developed as a strategic exploration of how digital-first brands can extend into meaningful physical experiences through intentional design.",
         category: "Event Branding",
-        images: ["/placeholder.jpg"],
+        images: ["https://res.cloudinary.com/dfqh2niw3/image/upload/v1776581730/Artboard_1_yhpptj.jpg"],
       },
       {
         title: "Event Project Placeholder 2",
