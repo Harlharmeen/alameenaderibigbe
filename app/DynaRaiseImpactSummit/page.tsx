@@ -16,7 +16,7 @@ const project = {
     "This project was developed as a strategic exploration of how digital-first brands can extend into meaningful physical experiences through intentional design.",
   category: "Brand Identity / Web",
   year: "2026",
-  impact: "Setting their footprint in their industry",
+  impact: "Presenting Brand Growth Expansion Window",
   images: [
     
     "https://res.cloudinary.com/dfqh2niw3/image/upload/v1776581730/Artboard_1_yhpptj.jpg",
