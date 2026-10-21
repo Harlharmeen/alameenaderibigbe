@@ -1,0 +1,1 @@
+export default function SectionHeading({eyebrow,title,copy}:{eyebrow:string;title:string;copy?:string}){return <div className="mb-10 max-w-2xl"><p className="eyebrow mb-4">{eyebrow}</p><h2 className="display text-4xl font-extrabold md:text-6xl">{title}</h2>{copy&&<p className="mt-5 max-w-xl text-sm leading-6 text-[color:var(--muted)]">{copy}</p>}</div>}
