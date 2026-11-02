@@ -1,36 +1,12 @@
-import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import SectionHeading from '@/components/section-heading';
-import { posts } from '@/data/content';
+import SectionHeading from '../../components/section-heading';
+import { posts } from '../../data/content';
 
-export const metadata: Metadata = {
-  title: 'Blog & Essays',
+export const metadata = {
+  title: 'Blog & Essays — Al-ameen Aderibigbe',
   description:
     'Essays, case study breakdowns, and tactical guides on product strategy, UX trust systems, and brand architecture.',
-  openGraph: {
-    title: 'Blog & Essays — Al-ameen Aderibigbe',
-    description:
-      'Essays, case study breakdowns, and tactical guides on product strategy, UX trust systems, and brand architecture.',
-    url: '/blog',
-    images: [
-      {
-        url: '/Open-graph-image.jpg',
-        secureUrl: 'https://alameenaderibigbe.site/Open-graph-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Essays by Al-ameen Aderibigbe',
-        type: 'image/jpeg',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Blog & Essays — Al-ameen Aderibigbe',
-    description:
-      'Essays, case study breakdowns, and tactical guides on product strategy, UX trust systems, and brand architecture.',
-    images: ['https://alameenaderibigbe.site/Open-graph-image.jpg'],
-  },
 };
 
 export default function Blog() {

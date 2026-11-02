@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import type { Metadata } from 'next';
-import { projects } from '@/data/content';
+import { projects } from '../../../data/content';
 
 export function generateStaticParams() {
   return projects.map((p) => ({ slug: p.slug }));
@@ -22,8 +22,6 @@ export async function generateMetadata({
     };
   }
 
-  const ogImage = project.image || '/Open-graph-image.jpg';
-
   return {
     title: `${project.title} — Case Study by Al-ameen Aderibigbe`,
     description: project.summary,
@@ -31,28 +29,20 @@ export async function generateMetadata({
       title: `${project.title} — Al-ameen Aderibigbe`,
       description: project.summary,
       type: 'article',
-      url: `/projects/${project.slug}`,
       images: [
         {
-          url: ogImage,
+          url: project.image || '/Open-graph-image.jpg',
           width: 1200,
           height: 630,
-          alt: `${project.title} — Case Study by Al-ameen Aderibigbe`,
+          alt: project.title,
         },
       ],
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${project.title} — Al-ameen Aderibigbe`,
+      title: project.title,
       description: project.summary,
-      images: [
-        {
-          url: ogImage,
-          width: 1200,
-          height: 630,
-          alt: `${project.title} — Case Study by Al-ameen Aderibigbe`,
-        },
-      ],
+      images: [project.image || '/Open-graph-image.jpg'],
     },
   };
 }
@@ -278,8 +268,8 @@ export default async function ProjectPage({
       <section className="container py-24">
         <div className="grid gap-12 lg:grid-cols-2">
           {/* Challenge */}
-          <div className="rounded-[20px] border border-red-500/20 bg-red-500/5 p-8 md:p-12">
-            <span className="mono text-xs font-bold uppercase tracking-wider text-red-600 dark:text-red-400">
+          <div className="rounded-[20px] border border-[color:var(--danger-border)] bg-[color:var(--danger-soft)] p-8 md:p-12">
+            <span className="mono text-xs font-bold uppercase tracking-wider text-[color:var(--danger)]">
               01 / The Friction & Challenge
             </span>
             <h3 className="mt-4 text-2xl font-bold tracking-tight md:text-3xl">
@@ -292,8 +282,8 @@ export default async function ProjectPage({
           </div>
 
           {/* Approach & Solution */}
-          <div className="rounded-[20px] border border-emerald-500/20 bg-emerald-500/5 p-8 md:p-12">
-            <span className="mono text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">
+          <div className="rounded-[20px] border border-[color:var(--success-border)] bg-[color:var(--success-soft)] p-8 md:p-12">
+            <span className="mono text-xs font-bold uppercase tracking-wider text-[color:var(--success)]">
               02 / The Strategic Solution
             </span>
             <h3 className="mt-4 text-2xl font-bold tracking-tight md:text-3xl">
