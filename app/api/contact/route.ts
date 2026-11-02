@@ -103,7 +103,7 @@ ${message}
         style="
           font-family: Arial, Helvetica, sans-serif;
           line-height: 1.6;
-          color: #181513;
+          color: #11110f;
           max-width: 680px;
           margin: 0 auto;
           padding: 32px 20px;
@@ -112,7 +112,7 @@ ${message}
 
         <div
           style="
-            border-bottom: 1px solid #d9cec4;
+            border-bottom: 1px solid #deded7;
             padding-bottom: 20px;
             margin-bottom: 28px;
           "
@@ -124,7 +124,7 @@ ${message}
               font-weight: 700;
               letter-spacing: 0.08em;
               text-transform: uppercase;
-              color: #5c504a;
+              color: #73736d;
             "
           >
             New Project Enquiry
@@ -160,7 +160,7 @@ ${message}
             <br />
             <a
               href="mailto:${email}"
-              style="color: #3b2118;"
+              style="color: #11110f;"
             >
               ${email}
             </a>
@@ -210,7 +210,7 @@ ${message}
             margin-top: 32px;
             padding: 24px;
             border-radius: 16px;
-            background: #f4efe9;
+            background: #f7f7f4;
           "
         >
 
@@ -221,7 +221,7 @@ ${message}
               font-weight: 700;
               letter-spacing: 0.08em;
               text-transform: uppercase;
-              color: #5c504a;
+              color: #73736d;
             "
           >
             Project Details
@@ -243,13 +243,13 @@ ${message}
           style="
             margin-top: 32px;
             padding-top: 20px;
-            border-top: 1px solid #d9cec4;
+            border-top: 1px solid #deded7;
             font-size: 12px;
-            color: #5c504a;
+            color: #73736d;
           "
         >
           This enquiry was submitted through
-          alameenaderibigbe.com.
+          alameenaderibigbe.site.
         </div>
 
       </div>

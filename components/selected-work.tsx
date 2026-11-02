@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import ProjectCard from './project-card';
-import { Project, ProjectCategory } from '../data/content';
+import { Project, ProjectCategory } from '@/data/content';
 
 interface SelectedWorkProps {
   projects: Project[];

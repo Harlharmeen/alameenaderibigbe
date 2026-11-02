@@ -1,11 +1,35 @@
+import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import SectionHeading from '../../components/section-heading';
+import SectionHeading from '@/components/section-heading';
 
-export const metadata = {
-  title: 'About — Al-ameen Aderibigbe',
+export const metadata: Metadata = {
+  title: 'About',
   description:
     'Background, design philosophy, and principles of Al-ameen Aderibigbe, Brand Identity & Product Designer.',
+  openGraph: {
+    title: 'About — Al-ameen Aderibigbe',
+    description:
+      'Background, design philosophy, and principles of Al-ameen Aderibigbe, Brand Identity & Product Designer.',
+    url: '/about',
+    images: [
+      {
+        url: '/Open-graph-image.jpg',
+        secureUrl: 'https://alameenaderibigbe.site/Open-graph-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'About Al-ameen Aderibigbe',
+        type: 'image/jpeg',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About — Al-ameen Aderibigbe',
+    description:
+      'Background, design philosophy, and principles of Al-ameen Aderibigbe, Brand Identity & Product Designer.',
+    images: ['https://alameenaderibigbe.site/Open-graph-image.jpg'],
+  },
 };
 
 export default function About() {
@@ -58,8 +82,8 @@ export default function About() {
 
             {/* Floating Information */}
             <div className="absolute inset-x-0 bottom-0 p-6 text-white">
-              <span className="inline-flex items-center gap-2 rounded-full border border-[color:var(--success-border)] bg-[color:var(--success-soft)] px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-[color:var(--success)] backdrop-blur-md">
-                <span className="size-1.5 rounded-full bg-[color:var(--success)] animate-pulse" />
+              <span className="inline-flex items-center gap-2 rounded-full bg-emerald-500/20 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-emerald-300 backdrop-blur-md">
+                <span className="size-1.5 rounded-full bg-emerald-400 animate-pulse" />
                 Available for Selected Work
               </span>
               <p className="mt-3 text-2xl font-bold tracking-[-.04em] text-white">

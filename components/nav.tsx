@@ -86,7 +86,7 @@ export default function Nav() {
             tracking-[-.06em]
           "
         >
-          Al-ameen Aderibigbe
+          AA
 
           <span
             className="

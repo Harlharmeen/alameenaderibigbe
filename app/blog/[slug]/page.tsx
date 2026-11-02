@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { Quote } from 'lucide-react';
-import { posts } from '../../../data/content';
+import { posts } from '@/data/content';
 
 export function generateStaticParams() {
   return posts.map((p) => ({ slug: p.slug }));
@@ -23,6 +23,8 @@ export async function generateMetadata({
     };
   }
 
+  const ogImage = post.image || '/Open-graph-image.jpg';
+
   return {
     title: `${post.title} — Al-ameen Aderibigbe`,
     description: post.seoDescription || post.excerpt,
@@ -39,9 +41,10 @@ export async function generateMetadata({
       title: post.title,
       description: post.seoDescription || post.excerpt,
       type: 'article',
+      url: `/blog/${post.slug}`,
       images: [
         {
-          url: post.image,
+          url: ogImage,
           width: 1200,
           height: 630,
           alt: post.title,
@@ -52,7 +55,14 @@ export async function generateMetadata({
       card: 'summary_large_image',
       title: post.title,
       description: post.seoDescription || post.excerpt,
-      images: [post.image],
+      images: [
+        {
+          url: ogImage,
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
     },
   };
 }

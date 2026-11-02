@@ -1,12 +1,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import ContactForm from '../components/contact-form';
-import SectionHeading from '../components/section-heading';
-import SelectedWork from '../components/selected-work';
-import TestimonialsSlider from '../components/testimonials-slider';
+import ContactForm from '@/components/contact-form';
+import SectionHeading from '@/components/section-heading';
+import SelectedWork from '@/components/selected-work';
+import TestimonialsSlider from '@/components/testimonials-slider';
 
-import { posts, projects, testimonials } from '../data/content';
+import { posts, projects, testimonials } from '@/data/content';
 
 const services = [
   {
