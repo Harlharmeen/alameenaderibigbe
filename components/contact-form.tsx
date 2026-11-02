@@ -712,8 +712,8 @@ export default function ContactForm() {
 
             ${
               status === 'success'
-                ? 'border-green-600/20 bg-green-600/10 text-green-800 dark:text-green-300'
-                : 'border-red-600/20 bg-red-600/10 text-red-800 dark:text-red-300'
+                ? 'status-message--success'
+                : 'status-message--error'
             }
           `}
         >
@@ -760,23 +760,23 @@ export default function ContactForm() {
             gap-3
             rounded-full
             border
-            border-[color:var(--fg)]
-            bg-[color:var(--fg)]
+            border-[color:var(--brand-primary)]
+            bg-[color:var(--brand-primary)]
             px-7
             text-sm
             font-semibold
-            text-[color:var(--bg)]
+            text-[color:var(--on-brand-primary)]
             transition
             duration-300
             hover:-translate-y-0.5
-            hover:border-[color:var(--accent)]
-            hover:bg-[color:var(--accent)]
-            hover:text-white
+            hover:border-[color:var(--brand-accent)]
+            hover:bg-[color:var(--brand-accent)]
+            hover:text-[color:var(--on-brand-accent)]
             disabled:cursor-not-allowed
             disabled:opacity-60
             disabled:hover:translate-y-0
-            disabled:hover:border-[color:var(--fg)]
-            disabled:hover:bg-[color:var(--fg)]
+            disabled:hover:border-[color:var(--brand-primary)]
+            disabled:hover:bg-[color:var(--brand-primary)]
           "
         >
 

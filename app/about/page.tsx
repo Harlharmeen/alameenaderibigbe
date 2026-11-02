@@ -58,8 +58,8 @@ export default function About() {
 
             {/* Floating Information */}
             <div className="absolute inset-x-0 bottom-0 p-6 text-white">
-              <span className="inline-flex items-center gap-2 rounded-full bg-emerald-500/20 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-emerald-300 backdrop-blur-md">
-                <span className="size-1.5 rounded-full bg-emerald-400 animate-pulse" />
+              <span className="inline-flex items-center gap-2 rounded-full border border-[color:var(--success-border)] bg-[color:var(--success-soft)] px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-[color:var(--success)] backdrop-blur-md">
+                <span className="size-1.5 rounded-full bg-[color:var(--success)] animate-pulse" />
                 Available for Selected Work
               </span>
               <p className="mt-3 text-2xl font-bold tracking-[-.04em] text-white">
