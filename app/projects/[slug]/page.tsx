@@ -211,7 +211,7 @@ export default async function ProjectPage({
               Looking for the full screen-by-screen presentation?
             </h3>
             <p className="mt-1 text-sm text-[color:var(--muted)] max-w-xl">
-              We focus on strategy and systems here; view the full high-fidelity Figma screens, interactive prototypes, and visual assets on Behance.
+              I focus on strategy and systems here; view the full high-fidelity Figma screens, interactive prototypes, and visual assets on Behance.
             </p>
           </div>
           <a

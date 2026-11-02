@@ -117,7 +117,7 @@ export default function Home() {
   {/* CV CTA */}
 
   <a
-    href="/Al-Ameen_Aderibigbe_Product_Designer_CV.pdf"
+    href="/Al-Ameen_Aderibigbe_Brand_Identity_Product_Designer_CV.pdf"
     download
     className="cta-secondary"
   >
